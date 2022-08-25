@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import India from './India';
+import India from './Components/India/India';
+import App from './Components/App/App';
 
 const root = ReactDOM.createRoot(document.getElementById('blank-container'));
 root.render(
     <React.StrictMode>
       <App />
-      <India />
+      {/* <India title="India" subtitle="Best Nation" /> */}
     </React.StrictMode>
 );
 
