@@ -5,7 +5,8 @@ import India from '../India/India';
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
-  const [thing1, setThing1] = useState()
+  const [thing1, setThing1] = useState();
+  const [bully, setBully] = useState("");
   // return (
   //   <div className="App">
   //     <header className="App-header">
@@ -28,13 +29,22 @@ function App() {
   const newElem = React.createElement("div", null, "Inside element" );
   const newElement = React.createElement("div", null, [newElem, "Hey there I am an array"] );
 
+  const onUserChange = (name) => {
+// tell parent pararent what happened 
+    setBully(name);
+  }
+
+
+
   return (
     <React.Fragment>
       <h1> this is an H1 tag </h1>
       <button onClick={() => setSub("Huge nation")}>Change the props</button>
-      <User />
-      <India title="India" subtitle={sub} />
-      <div>then this is created </div>
+      <User title="India"/>
+      <India onUserChange={onUserChange} bully={bully} title="India" subtitle={sub} />
+      <div>then this is created Parent</div>
+      <div>{bully}</div>
+      <button onClick={() => setBully("Chin")}>updateChin</button>
 
     </React.Fragment>
   )
