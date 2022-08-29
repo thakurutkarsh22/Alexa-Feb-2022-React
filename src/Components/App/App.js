@@ -1,7 +1,8 @@
-import './App.css';
-import React, { Children, useState } from 'react';
-import User from '../User/User';
-import India from '../India/India';
+import "./App.css";
+import React, { Children, useState } from "react";
+import User from "../User/User";
+import India from "../India/India";
+import ImpInfo from "../../CommonUI/ImpInfo/ImpInfo";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -26,29 +27,34 @@ function App() {
   //   </div>
   // );
 
-  const newElem = React.createElement("div", null, "Inside element" );
-  const newElement = React.createElement("div", null, [newElem, "Hey there I am an array"] );
+  const newElem = React.createElement("div", null, "Inside element");
+  const newElement = React.createElement("div", null, [
+    newElem,
+    "Hey there I am an array",
+  ]);
 
   const onUserChange = (name) => {
-// tell parent pararent what happened 
+    // tell parent pararent what happened
     setBully(name);
-  }
-
-
+  };
 
   return (
     <React.Fragment>
       <h1> this is an H1 tag </h1>
       <button onClick={() => setSub("Huge nation")}>Change the props</button>
-      <User title="India"/>
-      <India onUserChange={onUserChange} bully={bully} title="India" subtitle={sub} />
+      <User title="India" />
+      <India
+        onUserChange={onUserChange}
+        bully={bully}
+        title="India"
+        subtitle={sub}
+      />
       <div>then this is created Parent</div>
       <div>{bully}</div>
       <button onClick={() => setBully("Chin")}>updateChin</button>
-
+      <ImpInfo impInfo="Hey Important">Hey imp</ImpInfo>
     </React.Fragment>
-  )
+  );
 }
-
 
 export default App;
