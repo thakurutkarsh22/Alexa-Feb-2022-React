@@ -9,9 +9,9 @@ import Destructure from "./Components/Destructing/Destructuring";
 const root = ReactDOM.createRoot(document.getElementById("blank-container"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <India title="India" subtitle="Best Nation" /> */}
-    <Destructure title="welcome to Destruc" />
+    {/* <Destructure title="welcome to Destruc" /> */}
   </React.StrictMode>
 );
 

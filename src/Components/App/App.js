@@ -3,6 +3,7 @@ import React, { Children, useState } from "react";
 import User from "../User/User";
 import India from "../India/India";
 import ImpInfo from "../../CommonUI/ImpInfo/ImpInfo";
+import Portal from "../Portal/Portal";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -53,6 +54,7 @@ function App() {
       <div>{bully}</div>
       <button onClick={() => setBully("Chin")}>updateChin</button>
       <ImpInfo impInfo="Hey Important">Hey imp</ImpInfo>
+      <Portal></Portal>
     </React.Fragment>
   );
 }
