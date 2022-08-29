@@ -4,6 +4,7 @@ import User from "../User/User";
 import India from "../India/India";
 import ImpInfo from "../../CommonUI/ImpInfo/ImpInfo";
 import Portal from "../Portal/Portal";
+import Name from "../Name/Name";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -55,6 +56,9 @@ function App() {
       <button onClick={() => setBully("Chin")}>updateChin</button>
       <ImpInfo impInfo="Hey Important">Hey imp</ImpInfo>
       <Portal></Portal>
+
+      <h1>Here is the list of the children</h1>
+      <Name />
     </React.Fragment>
   );
 }
