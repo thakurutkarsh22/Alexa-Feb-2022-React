@@ -1,0 +1,18 @@
+.edit {
+  width: "30px";
+  height: "50px";
+  background-color: blue;
+}
+
+.delete {
+  width: "30px";
+  height: "50px";
+  background-color: red;
+}
+
+.todoItem {
+  width: "100px";
+  height: "80px";
+  margin: "10px";
+  padding: "10px";
+}

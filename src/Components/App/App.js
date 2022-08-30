@@ -5,6 +5,7 @@ import India from "../India/India";
 import ImpInfo from "../../CommonUI/ImpInfo/ImpInfo";
 import Portal from "../Portal/Portal";
 import Name from "../Name/Name";
+import TODO from "../TODO/Todo";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <h1> this is an H1 tag </h1>
+      {/* <h1> this is an H1 tag </h1>
       <button onClick={() => setSub("Huge nation")}>Change the props</button>
       <User title="India" />
       <India
@@ -58,7 +59,9 @@ function App() {
       <Portal></Portal>
 
       <h1>Here is the list of the children</h1>
-      <Name />
+      <Name /> */}
+
+      <TODO />
     </React.Fragment>
   );
 }
