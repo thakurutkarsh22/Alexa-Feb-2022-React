@@ -3,7 +3,7 @@ import Styles from "./TodoItem.module.css";
 // todo: {
 //     id: "",
 //     description: "",
-//     timeAndDate: "",
+//     time: "",
 // }
 
 function TodoItem(props) {
@@ -11,8 +11,10 @@ function TodoItem(props) {
   const { id, discription } = todoObj;
   return (
     <div className={Styles.todoItem}>
-      {discription}
-      <button onClick={() => onEdit(id)} className={Styles.edit}>
+      <span className={Number(discription) > 5 ? Styles.spanButifier : ""}>
+        {discription}
+      </span>
+      <button onClick={() => onEdit(todoObj)} className={Styles.edit}>
         Edit
       </button>
       <button onClick={() => onDelete(id)} className={Styles.delete}>
