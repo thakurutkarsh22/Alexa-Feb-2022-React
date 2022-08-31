@@ -6,6 +6,7 @@ import ImpInfo from "../../CommonUI/ImpInfo/ImpInfo";
 import Portal from "../Portal/Portal";
 import Name from "../Name/Name";
 import TODO from "../TODO/Todo";
+import UncontrolledForm from "../Forms/UncontrolledForm";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -62,6 +63,8 @@ function App() {
       <Name /> */}
 
       <TODO />
+
+      <UncontrolledForm />
     </React.Fragment>
   );
 }

@@ -7,6 +7,8 @@ function TODO() {
   const [buttonDescription, setButtonDesc] = useState("ADD");
   const [editTodoId, setEditTodoId] = useState();
 
+  console.log("RENDERING: TODO");
+
   function createTodoItem() {
     const todoObj = {
       id: Date.now() + todoList.length,
@@ -74,6 +76,19 @@ function TODO() {
     setTodoList(sortedArr);
   }
 
+  function inputHandler(e) {
+    console.log(e);
+    const value = e.target.value.toString();
+    console.log(value);
+    console.log(Number(value.toString()) !== NaN);
+    if (isFinite(value)) {
+      console.log("everything looks fine");
+      setInputItem(value);
+    } else {
+      console.log("everything is crap");
+    }
+  }
+
   return (
     <>
       {/* // Inputs */}
@@ -83,7 +98,7 @@ function TODO() {
           <input
             id="inputItem"
             value={inputItem}
-            onChange={(e) => setInputItem(e.target.value)}
+            onChange={inputHandler}
             type={"text"}
             placeholder="Enter Task"
           />
