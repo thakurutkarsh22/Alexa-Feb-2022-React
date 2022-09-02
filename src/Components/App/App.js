@@ -8,6 +8,7 @@ import Name from "../Name/Name";
 import TODO from "../TODO/Todo";
 import UncontrolledForm from "../Forms/UncontrolledForm";
 import UserForm from "../Forms/UserForm";
+import FormikForm from "../Forms/Formik";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -68,6 +69,7 @@ function App() {
       <UncontrolledForm /> */}
 
       <UserForm />
+      {/* <FormikForm /> */}
     </React.Fragment>
   );
 }

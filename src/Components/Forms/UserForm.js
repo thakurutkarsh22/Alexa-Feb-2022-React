@@ -30,8 +30,18 @@ function UserForm() {
   const [errorForm, setErrorForm] = useState(errorState);
   const [touchedElements, setTouchedElements] = useState(touchState);
 
+  const [list, setList] = useState([]);
+
   function changeHandler(event, inputKey) {
     const value = event.target.value;
+
+    if (inputKey === "gender") {
+      if (value === "male") {
+        setList(["spampoo", "soap"]);
+      } else {
+        setList(["makup", "dress"]);
+      }
+    }
 
     setFormState((oldState) => ({ ...oldState, [inputKey]: value }));
     updateValidationCheck(event, inputKey);
@@ -172,10 +182,16 @@ function UserForm() {
         <br />
         <label>Gender*: </label>
         <select onChange={(e) => changeHandler(e, "gender")}>
-          <option key={1}>Male</option>
-          <option key={2}>FeMale</option>
+          <option value={"male"} key={1}>
+            Male-90
+          </option>
+          <option value={"female"} key={2}>
+            FeMale
+          </option>
         </select>
         <span style={{ color: "red" }}>{errorForm.gender}</span>
+        <lable>Product</lable>
+        {[...list]}
         <br />
         <label>Dob*: </label>
         <input
