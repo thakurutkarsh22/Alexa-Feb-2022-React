@@ -9,11 +9,13 @@ import TODO from "../TODO/Todo";
 import UncontrolledForm from "../Forms/UncontrolledForm";
 import UserForm from "../Forms/UserForm";
 import FormikForm from "../Forms/Formik";
+import ClassLifeCycle from "../ClassLifeCycle/ClassLifeCycle";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
   const [thing1, setThing1] = useState();
   const [bully, setBully] = useState("");
+  const [showComponent, setShowCompoenet] = useState(true);
   // return (
   //   <div className="App">
   //     <header className="App-header">
@@ -68,8 +70,13 @@ function App() {
 
       <UncontrolledForm /> */}
 
-      <UserForm />
+      {/* <UserForm /> */}
       {/* <FormikForm /> */}
+
+      {<ClassLifeCycle />}
+      <button onClick={() => setShowCompoenet(false)}>
+        Delete the classLifeCycle
+      </button>
     </React.Fragment>
   );
 }
