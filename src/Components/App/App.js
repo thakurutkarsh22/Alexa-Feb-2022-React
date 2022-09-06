@@ -10,6 +10,7 @@ import UncontrolledForm from "../Forms/UncontrolledForm";
 import UserForm from "../Forms/UserForm";
 import FormikForm from "../Forms/Formik";
 import ClassLifeCycle from "../ClassLifeCycle/ClassLifeCycle";
+import ClockClass from "../Clock/ClockClass";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -35,16 +36,16 @@ function App() {
   //   </div>
   // );
 
-  const newElem = React.createElement("div", null, "Inside element");
-  const newElement = React.createElement("div", null, [
-    newElem,
-    "Hey there I am an array",
-  ]);
+  // const newElem = React.createElement("div", null, "Inside element");
+  // const newElement = React.createElement("div", null, [
+  //   newElem,
+  //   "Hey there I am an array",
+  // ]);
 
-  const onUserChange = (name) => {
-    // tell parent pararent what happened
-    setBully(name);
-  };
+  // const onUserChange = (name) => {
+  //   // tell parent pararent what happened
+  //   setBully(name);
+  // };
 
   return (
     <React.Fragment>
@@ -65,18 +66,21 @@ function App() {
 
       <h1>Here is the list of the children</h1>
       <Name /> */}
-
       {/* <TODO />
 
       <UncontrolledForm /> */}
-
       {/* <UserForm /> */}
       {/* <FormikForm /> */}
-
-      {<ClassLifeCycle />}
+      {/* {<ClassLifeCycle />}
       <button onClick={() => setShowCompoenet(false)}>
         Delete the classLifeCycle
+      </button> */}
+      {/* ------------  Clock --------------- */}
+      APP class
+      <button onClick={() => setShowCompoenet((oldState) => !oldState)}>
+        Toggle Clock Class
       </button>
+      {showComponent && <ClockClass />}
     </React.Fragment>
   );
 }
