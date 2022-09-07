@@ -11,6 +11,8 @@ import UserForm from "../Forms/UserForm";
 import FormikForm from "../Forms/Formik";
 import ClassLifeCycle from "../ClassLifeCycle/ClassLifeCycle";
 import ClockClass from "../Clock/ClockClass";
+import CounterParent from "../Counter/CounterParent";
+import ErrorBoundadry from "../../CommonUI/ErrorComponent/ErrorBoundadry";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -76,11 +78,14 @@ function App() {
         Delete the classLifeCycle
       </button> */}
       {/* ------------  Clock --------------- */}
-      APP class
+      {/* APP class
       <button onClick={() => setShowCompoenet((oldState) => !oldState)}>
         Toggle Clock Class
       </button>
-      {showComponent && <ClockClass />}
+      {showComponent && <ClockClass />} */}
+      <ErrorBoundadry>
+        <CounterParent />
+      </ErrorBoundadry>
     </React.Fragment>
   );
 }
