@@ -9,11 +9,16 @@ import TODO from "../TODO/Todo";
 import UncontrolledForm from "../Forms/UncontrolledForm";
 import UserForm from "../Forms/UserForm";
 import FormikForm from "../Forms/Formik";
+import ClassLifeCycle from "../ClassLifeCycle/ClassLifeCycle";
+import ClockClass from "../Clock/ClockClass";
+import CounterParent from "../Counter/CounterParent";
+import ErrorBoundadry from "../../CommonUI/ErrorComponent/ErrorBoundadry";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
   const [thing1, setThing1] = useState();
   const [bully, setBully] = useState("");
+  const [showComponent, setShowCompoenet] = useState(true);
   // return (
   //   <div className="App">
   //     <header className="App-header">
@@ -33,16 +38,16 @@ function App() {
   //   </div>
   // );
 
-  const newElem = React.createElement("div", null, "Inside element");
-  const newElement = React.createElement("div", null, [
-    newElem,
-    "Hey there I am an array",
-  ]);
+  // const newElem = React.createElement("div", null, "Inside element");
+  // const newElement = React.createElement("div", null, [
+  //   newElem,
+  //   "Hey there I am an array",
+  // ]);
 
-  const onUserChange = (name) => {
-    // tell parent pararent what happened
-    setBully(name);
-  };
+  // const onUserChange = (name) => {
+  //   // tell parent pararent what happened
+  //   setBully(name);
+  // };
 
   return (
     <React.Fragment>
@@ -63,13 +68,24 @@ function App() {
 
       <h1>Here is the list of the children</h1>
       <Name /> */}
-
       {/* <TODO />
 
       <UncontrolledForm /> */}
-
-      <UserForm />
+      {/* <UserForm /> */}
       {/* <FormikForm /> */}
+      {/* {<ClassLifeCycle />}
+      <button onClick={() => setShowCompoenet(false)}>
+        Delete the classLifeCycle
+      </button> */}
+      {/* ------------  Clock --------------- */}
+      {/* APP class
+      <button onClick={() => setShowCompoenet((oldState) => !oldState)}>
+        Toggle Clock Class
+      </button>
+      {showComponent && <ClockClass />} */}
+      <ErrorBoundadry>
+        <CounterParent />
+      </ErrorBoundadry>
     </React.Fragment>
   );
 }
