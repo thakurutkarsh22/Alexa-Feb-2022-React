@@ -14,6 +14,8 @@ import ClockClass from "../Clock/ClockClass";
 import CounterParent from "../Counter/CounterParent";
 import ErrorBoundadry from "../../CommonUI/ErrorComponent/ErrorBoundadry";
 import PokemonFunc from "../Pokemon/PokemonFunc";
+import Movie from "../Movie/Movie";
+import CounterReducer from "../Counter/CounterReducer";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -88,7 +90,9 @@ function App() {
         <CounterParent />
       </ErrorBoundadry> */}
 
-      <PokemonFunc />
+      {/* <PokemonFunc /> */}
+      {/* <Movie /> */}
+      <CounterReducer />
     </React.Fragment>
   );
 }
