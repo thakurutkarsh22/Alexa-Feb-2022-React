@@ -13,6 +13,7 @@ import ClassLifeCycle from "../ClassLifeCycle/ClassLifeCycle";
 import ClockClass from "../Clock/ClockClass";
 import CounterParent from "../Counter/CounterParent";
 import ErrorBoundadry from "../../CommonUI/ErrorComponent/ErrorBoundadry";
+import PokemonFunc from "../Pokemon/PokemonFunc";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -83,9 +84,11 @@ function App() {
         Toggle Clock Class
       </button>
       {showComponent && <ClockClass />} */}
-      <ErrorBoundadry>
+      {/* <ErrorBoundadry>
         <CounterParent />
-      </ErrorBoundadry>
+      </ErrorBoundadry> */}
+
+      <PokemonFunc />
     </React.Fragment>
   );
 }
