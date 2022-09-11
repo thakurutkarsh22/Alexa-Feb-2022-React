@@ -16,6 +16,7 @@ import ErrorBoundadry from "../../CommonUI/ErrorComponent/ErrorBoundadry";
 import PokemonFunc from "../Pokemon/PokemonFunc";
 import Movie from "../Movie/Movie";
 import CounterReducer from "../Counter/CounterReducer";
+import Game2048 from "../Game2048/Game2048";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -92,7 +93,8 @@ function App() {
 
       {/* <PokemonFunc /> */}
       {/* <Movie /> */}
-      <CounterReducer />
+      {/* <CounterReducer /> */}
+      <Game2048 />
     </React.Fragment>
   );
 }
