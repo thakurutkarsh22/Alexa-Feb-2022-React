@@ -17,6 +17,7 @@ import PokemonFunc from "../Pokemon/PokemonFunc";
 import Movie from "../Movie/Movie";
 import CounterReducer from "../Counter/CounterReducer";
 import Game2048 from "../Game2048/Game2048";
+import TodoApp from "../TODOReducerApp/TodoApp";
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
@@ -94,7 +95,8 @@ function App() {
       {/* <PokemonFunc /> */}
       {/* <Movie /> */}
       {/* <CounterReducer /> */}
-      <Game2048 />
+      {/* <Game2048 /> */}
+      <TodoApp />
     </React.Fragment>
   );
 }

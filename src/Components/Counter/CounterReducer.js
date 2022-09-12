@@ -39,13 +39,15 @@ const ResetAction = {
 
 }
 
-const defaultProperties = {
+const defaultState = {
     counter: 0,
     loading: false
 }
 
 function CounterReducer() {
-    const [state, dispatch ] = useReducer(CounterReducerDis, defaultProperties);
+    // this reducer function itself CounterReducerDis should be a pure fuction .. 
+    // no api calls, no gettting local storage, etc ... 
+    const [state, dispatch ] = useReducer(CounterReducerDis, defaultState);
 
     // const[counter, ] useState;
     // const [reset]
@@ -54,6 +56,10 @@ function CounterReducer() {
 
 
 // action object 
+// {
+//     type: 
+//     value: 
+// }
 
     console.log("render");
     return(
@@ -65,5 +71,7 @@ function CounterReducer() {
         </>
     );
 }
+
+//  
 
 export default CounterReducer;
