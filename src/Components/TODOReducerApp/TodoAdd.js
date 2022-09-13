@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 function TodoAdd(props) {
-    const {add} = props;
+    const {add, darkMode} = props;
+
+    console.log("darkMode in todoAdd", darkMode);
 
     const [todo, setTodo] = useState("");
     return (

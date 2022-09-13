@@ -18,12 +18,29 @@ import Movie from "../Movie/Movie";
 import CounterReducer from "../Counter/CounterReducer";
 import Game2048 from "../Game2048/Game2048";
 import TodoApp from "../TODOReducerApp/TodoApp";
+import DarkModeContext from "./context";
+
+
+
+
+// 1. providing 
+// DarkModeContext.Provider = 
+
+// 2. subscribing 
+// DarkModeContext.Consumer = // for the decendents to consume works with class components .... 
+// will work with functional component; useContext(-nameof the context);
+
+
 
 function App() {
   const [sub, setSub] = useState("Best Nation");
   const [thing1, setThing1] = useState();
   const [bully, setBully] = useState("");
   const [showComponent, setShowCompoenet] = useState(true);
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  console.log("darkMode in APp", darkMode);
   // return (
   //   <div className="App">
   //     <header className="App-header">
@@ -96,7 +113,11 @@ function App() {
       {/* <Movie /> */}
       {/* <CounterReducer /> */}
       {/* <Game2048 /> */}
-      <TodoApp />
+      <DarkModeContext.Provider value={darkMode}>
+        <TodoApp />
+      </DarkModeContext.Provider>
+
+      <button onClick={() => setDarkMode(old => !old)}>App Dark Mode</button>
     </React.Fragment>
   );
 }
