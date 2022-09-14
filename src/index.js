@@ -5,13 +5,19 @@ import reportWebVitals from "./reportWebVitals";
 import India from "./Components/India/India";
 import App from "./Components/App/App";
 import Destructure from "./Components/Destructing/Destructuring";
+import RoutesApp from "./Components/RoutesApp/RoutesApp";
+import { BrowserRouter } from "react-router-dom";
+// import {} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById("blank-container"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     {/* <India title="India" subtitle="Best Nation" /> */}
     {/* <Destructure title="welcome to Destruc" /> */}
+    <BrowserRouter>
+      <RoutesApp />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
