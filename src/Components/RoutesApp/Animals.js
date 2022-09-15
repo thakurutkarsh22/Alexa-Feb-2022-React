@@ -5,6 +5,7 @@ import Lion from "./Animals/Lion";
 function Animals() {
     console.log(useLocation());
     // to get the params .... 
+    // you can use something usesearchparams
     const {search} = useLocation();
     const animalType = search.split("=")[1];
     console.log(animalType);
