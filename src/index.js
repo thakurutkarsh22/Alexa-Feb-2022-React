@@ -12,12 +12,12 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("blank-container"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <India title="India" subtitle="Best Nation" /> */}
     {/* <Destructure title="welcome to Destruc" /> */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <RoutesApp />
-    </BrowserRouter>
+    </BrowserRouter> */}
   </React.StrictMode>
 );
 

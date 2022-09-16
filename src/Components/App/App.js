@@ -19,6 +19,8 @@ import CounterReducer from "../Counter/CounterReducer";
 import Game2048 from "../Game2048/Game2048";
 import TodoApp from "../TODOReducerApp/TodoApp";
 import DarkModeContext from "./context";
+import FormsUI from "../UnderstandingRefs/FormsUI/FormsUI";
+import Clock from "../UnderstandingRefs/Stopwatch/Clock";
 
 
 
@@ -113,11 +115,15 @@ function App() {
       {/* <Movie /> */}
       {/* <CounterReducer /> */}
       {/* <Game2048 /> */}
-      <DarkModeContext.Provider value={darkMode}>
+      {/* <DarkModeContext.Provider value={darkMode}>
         <TodoApp />
       </DarkModeContext.Provider>
 
-      <button onClick={() => setDarkMode(old => !old)}>App Dark Mode</button>
+      <button onClick={() => setDarkMode(old => !old)}>App Dark Mode</button> */}
+
+      {/* understanding refs */}
+      {/* <FormsUI /> */}
+      <Clock />
     </React.Fragment>
   );
 }
