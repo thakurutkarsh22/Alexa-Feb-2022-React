@@ -114,7 +114,7 @@ function App() {
       {/* <PokemonFunc /> */}
       {/* <Movie /> */}
       {/* <CounterReducer /> */}
-      {/* <Game2048 /> */}
+      <Game2048 />
       {/* <DarkModeContext.Provider value={darkMode}>
         <TodoApp />
       </DarkModeContext.Provider>
@@ -123,7 +123,7 @@ function App() {
 
       {/* understanding refs */}
       {/* <FormsUI /> */}
-      <Clock />
+      {/* <Clock /> */}
     </React.Fragment>
   );
 }
