@@ -21,6 +21,8 @@ import TodoApp from "../TODOReducerApp/TodoApp";
 import DarkModeContext from "./context";
 import FormsUI from "../UnderstandingRefs/FormsUI/FormsUI";
 import Clock from "../UnderstandingRefs/Stopwatch/Clock";
+import CounterRef from "../UnderstandingRefs/basicRef/CounterRef";
+import Playback from "../UnderstandingRefs/Playback/PlayBack";
 
 
 
@@ -114,7 +116,7 @@ function App() {
       {/* <PokemonFunc /> */}
       {/* <Movie /> */}
       {/* <CounterReducer /> */}
-      <Game2048 />
+      {/* <Game2048 /> */}
       {/* <DarkModeContext.Provider value={darkMode}>
         <TodoApp />
       </DarkModeContext.Provider>
@@ -124,6 +126,8 @@ function App() {
       {/* understanding refs */}
       {/* <FormsUI /> */}
       {/* <Clock /> */}
+      {/* <CounterRef /> */}
+      <Playback />
     </React.Fragment>
   );
 }
