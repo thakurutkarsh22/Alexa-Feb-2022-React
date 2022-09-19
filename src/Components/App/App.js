@@ -23,6 +23,9 @@ import FormsUI from "../UnderstandingRefs/FormsUI/FormsUI";
 import Clock from "../UnderstandingRefs/Stopwatch/Clock";
 import CounterRef from "../UnderstandingRefs/basicRef/CounterRef";
 import Playback from "../UnderstandingRefs/Playback/PlayBack";
+import Component from "../Performance/basics.js/basics";
+import Parent from "../Performance/Usage/Parent";
+// import Parent from "../Performance/basics.js/ReRenderingExample/Parent";
 
 
 
@@ -127,7 +130,12 @@ function App() {
       {/* <FormsUI /> */}
       {/* <Clock /> */}
       {/* <CounterRef /> */}
-      <Playback />
+      {/* <Playback /> */}
+      {/* <Component /> */}
+
+      {/* performance */}
+      {/* <Parent /> */}
+      <Parent />
     </React.Fragment>
   );
 }

@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
+
+// anti-pattern for useRef
+
 function CounterRef(props) {
     const [counterVal, setCounterVal] = useState(0)
     
