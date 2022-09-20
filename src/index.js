@@ -7,6 +7,7 @@ import App from "./Components/App/App";
 import Destructure from "./Components/Destructing/Destructuring";
 import RoutesApp from "./Components/RoutesApp/RoutesApp";
 import { BrowserRouter } from "react-router-dom";
+import LazyLoading from "./Components/Performance/LazyLoading/LazyLoading";
 // import {} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById("blank-container"));
@@ -18,6 +19,10 @@ root.render(
     {/* <BrowserRouter>
       <RoutesApp />
     </BrowserRouter> */}
+{/* lazy loading  */}
+    <BrowserRouter>
+      <LazyLoading />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

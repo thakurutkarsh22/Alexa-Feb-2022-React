@@ -10,11 +10,16 @@ function Child(props) {
     // const bar = () => {};
     // const baz  = [1,2,3];
 
-    useEffect(() => {
-        // heavy workload .... with help of bar and baz
-        console.log("heavy work inside the child");
-        // setState()
-    }, [bar, baz]);
+    // useEffect(() => {
+    //     // heavy workload .... with help of bar and baz
+    //     console.log("heavy work inside the child");
+    //     // setState()
+    // }, [bar, baz]);
+
+    // useEffect(() => {
+    //     console.log("light workout");
+    //     //  funciton addion ... 
+    // }, [bar, baz]);
 
 
 
