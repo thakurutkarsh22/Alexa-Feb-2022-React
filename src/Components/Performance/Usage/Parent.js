@@ -7,10 +7,22 @@ function Parent() {
     // bar wont be changed with re-rendering // 
     // bar will only change when dependency changes in the array 
     // use call back can store function 
-    const bar = useCallback(() => {}, []);
 
+    const myFunction = () => {}
+    // const bar = useCallback(myFunction, []);
+
+    // calling a finction
+    //  -> logic inside the useCallback is heavy ... 
+
+    // garbage collection ... 
+    // 2nd reder  ... the callback function will be not garbage collected  .... 
+
+
+    
     // useMemo can store value 
     const baz  = useMemo(() => [1,2,3], []);
+
+    const bar = useMemo(() => myFunction, []);
 
     console.log("render: parent");
 
@@ -25,7 +37,11 @@ export default Parent;
 
  // 
 // useCallback() --> function
-// useMemo() --> value
+// useMemo() --> value (string, array, object, function);
 
 
 // React.memo(Component) --> it memoise the whole component.... 
+// -> if any props change 
+        // -> then rerender
+    // else 
+        // -> dont  do anything ... 

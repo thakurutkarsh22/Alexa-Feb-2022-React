@@ -1,5 +1,5 @@
 import { setNestedObjectValues } from "formik";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 function Child(props) {
 
@@ -24,4 +24,4 @@ function Child(props) {
         </> 
     )
 }
-export default Child;
+export default React.memo(Child);
