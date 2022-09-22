@@ -34,9 +34,9 @@ function LazyLoading() {
             <Suspense fallback={<h1>Loading .... / fetching ...... /</h1>}>
                 <Routes>
                     <Route path="/" element={<h1>Welcome to routes</h1>}/>
-                    <Route path="/whale" element={WhaleLazy}/>
-                    <Route path="/mermaid" element={Mermaidlazy}/>
-                    <Route path="*" element={NotFoundLazy}/>
+                    <Route path="/whale" element={<WhaleLazy />}/>
+                    <Route path="/mermaid" element={<Mermaidlazy />}/>
+                    <Route path="*" element={<NotFoundLazy />}/>
                     
                 </Routes>
             </Suspense>
