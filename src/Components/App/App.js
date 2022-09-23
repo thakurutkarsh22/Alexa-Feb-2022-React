@@ -26,6 +26,7 @@ import Playback from "../UnderstandingRefs/Playback/PlayBack";
 import Component from "../Performance/basics.js/basics";
 import Parent from "../Performance/Usage/Parent";
 import UseToggleApp from "../CustomHooks/usetoggle/UseToggleApp";
+import UseLocalStorageApp from "../CustomHooks/useLocalStorage/UseLocalStorageApp";
 // import Parent from "../Performance/basics.js/ReRenderingExample/Parent";
 
 
@@ -140,7 +141,8 @@ function App() {
 
 
       {/* ------------------------ custom hooks ---------------------  */}
-      <UseToggleApp />
+      {/* <UseToggleApp /> */}
+      <UseLocalStorageApp />
     </React.Fragment>
   );
 }
