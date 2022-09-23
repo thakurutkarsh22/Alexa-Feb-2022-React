@@ -1,39 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import useStopwatchControl from "./useStopwatchControl";
 
 function Clock() {
-
-    const [time, setTime] = useState(new Date().toLocaleTimeString());
     const [counter, setCounter] = useState(1);
     const timeRef = useRef(null);
 
-    useEffect(() => {
-        timeRef.current = setInterval(() => {
-            setTime(new Date().toLocaleTimeString())
-        }, 1000);
-        console.log(timeRef.current);
-
-        return () => {
-            clearInterval(timeRef.current)
-        }
-
-    }, []);
-
-
-
-    function start() {
-        stop()
-        timeRef.current = setInterval(() => {
-            setTime(new Date().toLocaleTimeString())
-        }, 1000);
-
-        console.log("new val", timeRef.current);
-    }
-
-    function stop() {
-        console.log(timeRef.current, "stop");
-        clearInterval(timeRef.current);
-    }
-
+    const {time, start, stop } = useStopwatchControl({timeRef});
 
     return (<>
         <div>Clock</div>

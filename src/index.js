@@ -20,9 +20,9 @@ root.render(
       <RoutesApp />
     </BrowserRouter> */}
 {/* lazy loading  */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <LazyLoading />
-    </BrowserRouter>
+    </BrowserRouter> */}
   </React.StrictMode>
 );
 

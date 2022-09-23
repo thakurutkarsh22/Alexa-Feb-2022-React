@@ -25,6 +25,7 @@ import CounterRef from "../UnderstandingRefs/basicRef/CounterRef";
 import Playback from "../UnderstandingRefs/Playback/PlayBack";
 import Component from "../Performance/basics.js/basics";
 import Parent from "../Performance/Usage/Parent";
+import UseToggleApp from "../CustomHooks/usetoggle/UseToggleApp";
 // import Parent from "../Performance/basics.js/ReRenderingExample/Parent";
 
 
@@ -135,7 +136,11 @@ function App() {
 
       {/* performance */}
       {/* <Parent /> */}
-      <Parent />
+      {/* <Parent /> */}
+
+
+      {/* ------------------------ custom hooks ---------------------  */}
+      <UseToggleApp />
     </React.Fragment>
   );
 }
