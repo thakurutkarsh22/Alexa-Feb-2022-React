@@ -27,6 +27,7 @@ import Component from "../Performance/basics.js/basics";
 import Parent from "../Performance/Usage/Parent";
 import UseToggleApp from "../CustomHooks/usetoggle/UseToggleApp";
 import UseLocalStorageApp from "../CustomHooks/useLocalStorage/UseLocalStorageApp";
+import UseLocatorApp from "../CustomHooks/useLocator/UseLocatorApp";
 // import Parent from "../Performance/basics.js/ReRenderingExample/Parent";
 
 
@@ -120,7 +121,7 @@ function App() {
 
       {/* <PokemonFunc /> */}
       {/* <Movie /> */}
-      {/* <CounterReducer /> */}
+      <CounterReducer />
       {/* <Game2048 /> */}
       {/* <DarkModeContext.Provider value={darkMode}>
         <TodoApp />
@@ -142,7 +143,8 @@ function App() {
 
       {/* ------------------------ custom hooks ---------------------  */}
       {/* <UseToggleApp /> */}
-      <UseLocalStorageApp />
+      {/* <UseLocalStorageApp /> */}
+      {/* <UseLocatorApp /> */}
     </React.Fragment>
   );
 }

@@ -24,6 +24,8 @@ function CounterReducerDis(state, action) {
 
 }
 
+// action 
+
 const IncrementAction = {
     type: "INCREMENT",
 
