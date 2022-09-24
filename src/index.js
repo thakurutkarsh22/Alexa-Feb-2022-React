@@ -8,12 +8,16 @@ import Destructure from "./Components/Destructing/Destructuring";
 import RoutesApp from "./Components/RoutesApp/RoutesApp";
 import { BrowserRouter } from "react-router-dom";
 import LazyLoading from "./Components/Performance/LazyLoading/LazyLoading";
+import {Provider} from 'react-redux';
+import ReduceApp from "./Components/ReduxApp/ReduceApp";
+import configureStore from "./Components/ReduxApp/store";
+import ReduceAppFunc from "./Components/ReduxApp/ReduceAppFunc";
 // import {} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById("blank-container"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     {/* <India title="India" subtitle="Best Nation" /> */}
     {/* <Destructure title="welcome to Destruc" /> */}
     {/* <BrowserRouter>
@@ -23,6 +27,12 @@ root.render(
     {/* <BrowserRouter>
       <LazyLoading />
     </BrowserRouter> */}
+
+    <Provider store={configureStore()}>
+      <ReduceApp /> 
+      <ReduceAppFunc />
+    </Provider>
+
   </React.StrictMode>
 );
 
