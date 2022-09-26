@@ -1,8 +1,10 @@
+
+// ============  normal redux --------------
+
+import {createSlice } from "@reduxjs/toolkit";
+
 import { createStore } from 'redux'
 import toggleReducer, { DEFAULT_STATE } from './reducer/reducer'
-
-
-
 
 
 function configureStore() {

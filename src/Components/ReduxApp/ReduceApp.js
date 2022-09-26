@@ -8,7 +8,7 @@ class ReduceApp extends Component {
         console.log("hey there props", this.props);
         return(
             <div>
-                hello {this.props.toggleValue ? "a": "b"}
+                hello {this.props.toggleValue ? "ON": "OFF"}
                 <button onClick={() => this.props.changeTheText()}>Click me</button>
             </div>
         );

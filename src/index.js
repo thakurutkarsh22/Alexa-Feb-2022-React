@@ -12,6 +12,9 @@ import {Provider} from 'react-redux';
 import ReduceApp from "./Components/ReduxApp/ReduceApp";
 import configureStore from "./Components/ReduxApp/store";
 import ReduceAppFunc from "./Components/ReduxApp/ReduceAppFunc";
+import CounterRedux from "./Components/ReduxCounter/CounterRedux";
+import storeSlice from "./Components/ReduxCounter/store";
+
 // import {} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById("blank-container"));
@@ -28,9 +31,16 @@ root.render(
       <LazyLoading />
     </BrowserRouter> */}
 
+{/* tradational Redux..... */}
     <Provider store={configureStore()}>
       <ReduceApp /> 
       <ReduceAppFunc />
+    </Provider>
+
+    {/* redux- toolkit */}
+
+    <Provider store={storeSlice}>
+      <CounterRedux />
     </Provider>
 
   </React.StrictMode>
