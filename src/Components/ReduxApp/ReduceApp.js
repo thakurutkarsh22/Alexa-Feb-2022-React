@@ -17,9 +17,9 @@ class ReduceApp extends Component {
 }
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (store) => {
     return {
-        toggleValue: state.value
+        toggleValue: store.value
     }
 }
 

@@ -1,7 +1,11 @@
 import CONSTANTS from "../actions/actionTypes/actionTypes";
 
 export const DEFAULT_STATE = {
-    value: true
+    value: true, // dark mode
+    isLoading: false, // loading 
+    isAuth: false, // atuth
+
+    counter: 0, // counter
 }
 
 // pure function 

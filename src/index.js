@@ -10,10 +10,12 @@ import { BrowserRouter } from "react-router-dom";
 import LazyLoading from "./Components/Performance/LazyLoading/LazyLoading";
 import {Provider} from 'react-redux';
 import ReduceApp from "./Components/ReduxApp/ReduceApp";
-import configureStore from "./Components/ReduxApp/store";
+// import configureStore from "./Components/ReduxApp/store";
 import ReduceAppFunc from "./Components/ReduxApp/ReduceAppFunc";
 import CounterRedux from "./Components/ReduxCounter/CounterRedux";
 import storeSlice from "./Components/ReduxCounter/store";
+import configureStore from "./Components/GithubRedux/store";
+import GithubApp from "./Components/GithubRedux/GithubApp";
 
 // import {} from 'react-router-dom'
 
@@ -32,15 +34,19 @@ root.render(
     </BrowserRouter> */}
 
 {/* tradational Redux..... */}
-    <Provider store={configureStore()}>
+    {/* <Provider store={configureStore()}>
       <ReduceApp /> 
       <ReduceAppFunc />
-    </Provider>
+    </Provider> */}
 
     {/* redux- toolkit */}
 
-    <Provider store={storeSlice}>
+    {/* <Provider store={storeSlice}>
       <CounterRedux />
+    </Provider> */}
+
+    <Provider store={configureStore()}>
+      <GithubApp />
     </Provider>
 
   </React.StrictMode>
