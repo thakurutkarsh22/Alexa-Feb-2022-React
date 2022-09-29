@@ -16,6 +16,8 @@ import CounterRedux from "./Components/ReduxCounter/CounterRedux";
 import storeSlice from "./Components/ReduxCounter/store";
 import configureStore from "./Components/GithubRedux/store";
 import GithubApp from "./Components/GithubRedux/GithubApp";
+import CounterUndoRedux from "./UndoRedux/CounterUndoRedux";
+import undoReduxStore from "./UndoRedux/store";
 
 // import {} from 'react-router-dom'
 
@@ -45,8 +47,12 @@ root.render(
       <CounterRedux />
     </Provider> */}
 
-    <Provider store={configureStore()}>
+    {/* <Provider store={configureStore()}>
       <GithubApp />
+    </Provider> */}
+
+    <Provider store={undoReduxStore}>
+      <CounterUndoRedux />
     </Provider>
 
   </React.StrictMode>
